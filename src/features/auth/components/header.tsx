@@ -1,4 +1,4 @@
-import logoPath from "@/assets/images/logo.svg";
+import { AppLogo } from "@/components/misc";
 
 type AuthHeaderProps = {
   title: string;
@@ -8,13 +8,7 @@ type AuthHeaderProps = {
 export const Header = ({ title, description }: AuthHeaderProps) => {
   return (
     <>
-      <div className="flex gap-3 items-center">
-        <img src={logoPath} className="h-7" />
-        <span className="text-[#09090b] dark:text-foreground font-bold text-xl tracking-[-.015em]">
-          SNJOBS
-        </span>
-      </div>
-
+      <AppLogo />
       <div className="text-center space-y-1">
         <h2>{title}</h2>
         <div className="text-muted-foreground">{description}</div>
