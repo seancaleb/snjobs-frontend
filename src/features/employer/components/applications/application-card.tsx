@@ -13,11 +13,13 @@ import { JobApplications } from "../../schema/applications.schema";
 type ApplicationsCardProps = {
   applications: JobApplications;
   jobId?: string;
+  description?: string;
 };
 
 export const ApplicationCard = ({
   applications,
   jobId,
+  description = "Latest applications for this job post.",
 }: ApplicationsCardProps) => {
   const location = useLocation();
 
@@ -38,9 +40,7 @@ export const ApplicationCard = ({
               <ChevronRight className="icon-end" />
             </Link>
           </div>
-          <CardDescription>
-            Latest applications for this job post.
-          </CardDescription>
+          <CardDescription>{description}</CardDescription>
         </div>
       </CardHeader>
       <CardContent className="grid gap-4 relative overflow-x-auto">

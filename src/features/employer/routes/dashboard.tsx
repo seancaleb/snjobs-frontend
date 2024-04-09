@@ -92,7 +92,10 @@ export const Dashboard = () => {
           </Card>
         </div>
 
-        <ApplicationCard applications={applications.data} />
+        <ApplicationCard
+          applications={applications.data}
+          description="Recent applications from applicants."
+        />
       </div>
 
       <JobPostingsCard jobs={jobs.data} />
