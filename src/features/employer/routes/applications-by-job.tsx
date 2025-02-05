@@ -1,11 +1,11 @@
-import { ContentLayout } from "@/components/layout";
-import { columnsByJob } from "../components/applications/table/applications-by-job-column";
-import { ApplicationsTable } from "../components/applications/table/applications-table";
-import { useGetJobApplications } from "../api/use-get-job-applications";
 import { DataLoader } from "@/components/elements";
-import { useParams } from "react-router";
+import { ContentLayout } from "@/components/layout";
 import { useGetJobById } from "@/features/jobs";
 import { useDocumentTitle } from "@mantine/hooks";
+import { useParams } from "react-router-dom";
+import { useGetJobApplications } from "../api/use-get-job-applications";
+import { columnsByJob } from "../components/applications/table/applications-by-job-column";
+import { ApplicationsTable } from "../components/applications/table/applications-table";
 
 type RouteParams = {
   jobId: string;

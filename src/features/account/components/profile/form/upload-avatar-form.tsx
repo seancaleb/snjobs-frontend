@@ -1,20 +1,17 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect } from "react";
-import { toast } from "sonner";
-import { toastMessageFormatter } from "@/utils/toast-message-formatter";
-import { cn } from "@/lib/utils";
 import { Spinner } from "@/components/elements";
 import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-import {
-  UploadAvatarFormValues,
-  uploadAvatarFormSchema,
-} from "./upload-avatar-form.schema";
+import { Input } from "@/components/ui/input";
 import { useUpdateAvatar } from "@/features/account/api/use-update-avatar";
+import { cn } from "@/lib/utils";
+import { toastMessageFormatter } from "@/utils/toast-message-formatter";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Plus } from "lucide-react";
+import { useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
+import { UploadAvatarFormValues, uploadAvatarFormSchema } from "./upload-avatar-form.schema";
 
 export const UploadAvatarForm = () => {
   const updateAvatarMutation = useUpdateAvatar();
@@ -78,7 +75,6 @@ export const UploadAvatarForm = () => {
                 <FormControl>
                   <Input
                     type="file"
-                    style={{ textIndent: "-9999px" }}
                     className="absolute bottom-0 text-transparent rounded-full cursor-pointer h-[30px] w-[30px] right-0 transform translate-x-[4px] translate-y-[4px] z-20 border-transparent"
                     {...fileRef}
                   />

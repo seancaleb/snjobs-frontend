@@ -1,10 +1,10 @@
-import { Separator } from "@/components/ui/separator";
-import { ContentLayout } from "@/components/layout";
-import { EditJobForm } from "../components/jobs/form/edit-job-form";
-import { useGetJobById } from "@/features/jobs";
-import { useParams } from "react-router";
 import { DataLoader } from "@/components/elements";
+import { ContentLayout } from "@/components/layout";
+import { Separator } from "@/components/ui/separator";
+import { useGetJobById } from "@/features/jobs";
 import { useDocumentTitle } from "@mantine/hooks";
+import { useParams } from "react-router-dom";
+import { EditJobForm } from "../components/jobs/form/edit-job-form";
 
 type RouteParams = {
   jobId: string;
@@ -28,11 +28,7 @@ export const EditJob = () => {
   }
 
   return (
-    <ContentLayout
-      className="relative max-w-4xl mx-auto"
-      title={title}
-      subtitle={subtitle}
-    >
+    <ContentLayout className="relative max-w-4xl mx-auto" title={title} subtitle={subtitle}>
       <Separator />
       <EditJobForm job={job} />
     </ContentLayout>

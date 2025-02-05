@@ -1,12 +1,12 @@
 import { DataLoader } from "@/components/elements";
 import { ContentLayout } from "@/components/layout";
+import { AppLogo } from "@/components/misc";
 import { Badge } from "@/components/ui/badge";
 import { useGetProfileDetails } from "@/features/account";
 import { ProfileAvatar } from "@/features/account/components/profile/profile-avatar";
 import { useDocumentTitle } from "@mantine/hooks";
-import { useParams } from "react-router";
 import _ from "lodash";
-import { AppLogo } from "@/components/misc";
+import { useParams } from "react-router-dom";
 
 type RouteParams = {
   userId: string;
